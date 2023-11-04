@@ -1,4 +1,4 @@
-# my-repo
+# Trials by learning git
 - first connect the local git with the github repo`
 - after git push -u origin main command, try just use git push.
 - YES! It works, no need to add "-u origin main" again
@@ -11,3 +11,7 @@
 - check the [introduction example](https://docs.github.com/en/get-started/quickstart/hello-world) to go roughly through how github works in terms of website UI
 - check the [official documents](https://docs.github.com/en/get-started/using-git/about-git#example-contribute-to-an-existing-repository)
 
+# Basic command
+
+## create local git and connect to GitHub repo.
+1. 
