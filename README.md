@@ -18,8 +18,11 @@
 3. `git config --global user.email "<your-email>"`
 - After the above commands, you should find the hidden file ".gitconfig" by recalling the command `ll` in the home folder
 
-## add the ssh key to GitHuh account
-
+## add the ssh key to GitHub account
+1. `cd && ll` 返回home文件夹，查看是否存在.ssh文件夹，如果没有，则需要自行创建ssh key
+2. `ssh-keygen -t rsa -b 2048` 指定生成RSA密匙类型的密匙；指定密匙的比特长度，2048已经足够，还可以是4096；生成私匙(id_rsa)和公匙(id_rsa.pub)文件
+3. `cd .ssh && cat id_rsa.pub` 打开.ssh文件夹，查看id_rsa.pub文件内容
+4. 复制.pub文件内容，添加到GitHub账户中
 
 ## Create a local git repo. and connect to simultaneously built GitHub repo.
 - create [GitHub repo.](https://docs.github.com/en/get-started/quickstart/create-a-repo?tool=webui)
