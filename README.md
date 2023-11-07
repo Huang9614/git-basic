@@ -19,7 +19,9 @@
 - After the above commands, you should find the hidden file ".gitconfig" by recalling the command `ll` in the home folder
 
 ## add the ssh key to GitHuh account
-## create local git repo. and connect to simutanuouslly built GitHub repo.
+
+
+## Create a local git repo. and connect to simultaneously built GitHub repo.
 - create [GitHub repo.](https://docs.github.com/en/get-started/quickstart/create-a-repo?tool=webui)
 - create a local repo.
   1. `git init <git-repo-name>`
@@ -35,13 +37,13 @@
   1. `git remote add origin <ssh of the just now created GitHub repo.>`
   2. `git push -u origin main`
 
-## commit the changes on local git repo to the corresponding GitHub repo
-- the following commands are based under the assumption of successful connection between git repo and GitHub repo
+## Commit the changes on the local git repo to the corresponding GitHub repo
+- the following commands are based on the assumption of a successful connection between git repo and the GitHub repo
 1. `git add <changed-file-name>`
 2. `git commit -m "description of changes"`
 3. `git push`
 
-## create locally the branch of a repo.
+## Create locally the branch of a repo.
 1. `git branch <branch-name>`
 2. `git checkout <branch-name>` : switch to the branch
 3. `git add <changed-file-name>`
@@ -50,7 +52,7 @@
 - after the 5th. command, all `git push` will commit to the GitHub branch
 - the name of git branch is the same as GitHub branch
 
-## clone the existed GitHub repo to local
+## Clone the existing GitHub repo to local
 1. `git clone <ssh-to-the GitHub-repo>`
 2. `git checkout <branch-name>`
 3. `git add <changed_file>`
@@ -58,13 +60,18 @@
 5. `git push`
 - due to the `git clone`, there is no need for the connection: `-u origin main`
 
-## merge the branches to the main 
+## Merge the branches to the main 
 1. `git fetch`
-2. `git checkout <name of base branch, normally the main>`
+2. `git checkout <name of the base branch, normally the main>`
 3. `git merge <name of the to be merged branches>`
 4. `git push`
 
-## fetch the commited file
+## fetch the committed file
 1. `git checkout <branch>`
 2. `git fetch`
 
+## Git fork
+- 完整复制别人的repo.
+- 可以自行管理和修改
+- 可以通过 `git pull`和 `git request` 请求合并，共同协作
+- 可以作为repo.的备份
