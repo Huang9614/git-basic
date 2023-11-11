@@ -36,10 +36,11 @@
      - `git log` can be used to check the history of commits
      - or check the history to the certain file on GitHub
   8. `git branch -m main`
-- connect the GitHub repo. and the local git repo
+- connect the GitHub repo. and the local git repo; 
   1. `git remote add origin <ssh of the just now created GitHub repo.>`
   2. `git push -u origin main`
 
+  `git remote add` 添加一个远程仓库。但是，请注意，这只是告诉 Git 你的本地仓库有一个远程仓库，而不涉及与本地分支的远程分支之间的跟踪关系。check [ChatGPT history](https://chat.openai.com/share/eae04fb6-8c31-4458-ad06-551ac8c03b56)
 ## Commit the changes on the local git repo to the corresponding GitHub repo
 - the following commands are based on the assumption of a successful connection between git repo and the GitHub repo
 1. `git add <changed-file-name>`
