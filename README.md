@@ -38,7 +38,7 @@
   8. `git branch -m main`
 - connect the GitHub repo. and the local git repo; 
   1. `git remote add origin <ssh of the just now created GitHub repo.>`
-  2. `git push -u origin main`
+  2. `git push -u origin main` 将本地的 `main` 分支的提交推送到名为 `origin` 的远程仓库，并设置本地 `main` 分支跟踪（track）远程仓库的 `main` 分支
 
   `git remote add` 添加一个远程仓库。但是，请注意，这只是告诉 Git 你的本地仓库有一个远程仓库，而不涉及与本地分支的远程分支之间的跟踪关系。check [ChatGPT history](https://chat.openai.com/share/eae04fb6-8c31-4458-ad06-551ac8c03b56)
 ## Commit the changes on the local git repo to the corresponding GitHub repo
@@ -79,3 +79,20 @@
 - 可以自行管理和修改
 - 可以通过 `git pull`和 `git request` 请求合并，共同协作
 - 可以作为repo.的备份
+
+## initialize the local git and connect to a irrelative GitHub repo.
+1. `git init`
+2. `git status`
+   - 在较新版本的 Git 中，只需执行 git init，然后 Git 会自动创建 main 分支。
+   - 在较老版本的 Git 中，你可能需要先执行 git init，然后执行 git checkout -b main 来创建并切换到 main 分支。
+3. `git checkout -b main`
+4. `git remote add origin <GitHub-repo.SSH>`
+   - 在你的本地 Git 仓库中，通过使用 git remote add origin <远程仓库URL> 可以添加一个远程仓库。但是，请注意，这只是告诉 Git 你的本地仓库有一个远程仓库，而不涉及与本地分支的远程分支之间的跟踪关系。
+   - `git fetch origin` 拉取远程分支到本地
+   - `git branch -u origin/main main` 将本地分支与远程分支关联
+   - `git pull origin main --allow-unrelated-histories` 如果你希望忽略不相关历史的错误，你还可以使用 --allow-unrelated-histories 选项进行合并
+5. `git pull` 从 GitHub 上的远程仓库克隆了一个新的仓库，并且该仓库包含了一些分支; 当前的本地分支没有与远程分支建立跟踪关系
+6. `git branch -u origin/main main` Git知道了本地分支 main 应该跟踪远程分支 origin/main
+
+### Notes
+- `git branch -m <new name>` 用于重命名分支; `git branch -u <远程名>/<远程分支名> <本地分支名>` 将本地分支 `<本地分支名>` 设置为跟踪远程分支 `<远程名>/<远程分支名>`。例如，如果你想将本地的 `main` 分支跟踪远程的 `origin/main` 分支，可以执行 `git branch -u origin/main main`; `git checkout -b main` 创建一个名为 main 的新分支，并切换到这个分支;
