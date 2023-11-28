@@ -94,5 +94,13 @@
 5. `git pull` 从 GitHub 上的远程仓库克隆了一个新的仓库，并且该仓库包含了一些分支; 当前的本地分支没有与远程分支建立跟踪关系
 6. `git branch -u origin/main main` Git知道了本地分支 main 应该跟踪远程分支 origin/main
 
+## 如何通过git bash删除repo上的某些文件和文件夹；如何添加新的文件夹
+[查看](https://chat.openai.com/share/ed4bcacd-ba23-4749-9e7e-c487298a7287)
+
 ### Notes
 - `git branch -m <new name>` 用于重命名分支; `git branch -u <远程名>/<远程分支名> <本地分支名>` 将本地分支 `<本地分支名>` 设置为跟踪远程分支 `<远程名>/<远程分支名>`。例如，如果你想将本地的 `main` 分支跟踪远程的 `origin/main` 分支，可以执行 `git branch -u origin/main main`; `git checkout -b main` 创建一个名为 main 的新分支，并切换到这个分支;
+
+# git 冲突解决
+1. 本地没有建立ssh
+2. [本地分支落后于远程仓库的主分支 (main)](https://chat.openai.com/share/7ba82828-72a9-486d-b80e-690bdcd0ea15)
+3. [合并两个不相关的git仓库](https://chat.openai.com/share/82a06790-4d4a-4893-81f0-ec233de24a28)
