@@ -1,9 +1,18 @@
-# reference
+# 参考资料
 - check the [introduction example](https://docs.github.com/en/get-started/quickstart/hello-world) to go roughly through how github works in terms of website UI
 - check the [official documents](https://docs.github.com/en/get-started/using-git/about-git#example-contribute-to-an-existing-repository)
 - [查看](https://git.scc.kit.edu/AIL/ail/-/wikis/Infrastructure/Software/Git/Git-AIL-Development-Workflow)
 
-# Basic command
+# 不同情况
+1. [毫无基础。刚申请完github账号，啥也不懂](#情况一)
+2. 有感兴趣的repo.，不知道怎么弄到本地运行
+3. 弄到本地，小修小改，如何更新repo.
+4. 想把已有的github repo.和本地的repo.（文件夹）相连接
+5. fork了别人的repo.，别人和咱们都更新了，如何合并两边的修改
+6. [fork了别人的repo.，修改后，如何申请合并](#情况六)
+
+<a name="情况一"></a>
+# 情况一
 ## initialize: identify the user and user-email
 1. `cd ~`
 2. `git config --global user.name "<your-name>"`
@@ -89,6 +98,9 @@
 ## 如何通过git bash删除repo上的某些文件和文件夹；如何添加新的文件夹
 [查看](https://chat.openai.com/share/ed4bcacd-ba23-4749-9e7e-c487298a7287)
 
+
+<a name="情况六"></a>
+# 情况六
 ### Notes
 - `git branch -m <new name>` 用于重命名分支; `git branch -u <远程名>/<远程分支名> <本地分支名>` 将本地分支 `<本地分支名>` 设置为跟踪远程分支 `<远程名>/<远程分支名>`。例如，如果你想将本地的 `main` 分支跟踪远程的 `origin/main` 分支，可以执行 `git branch -u origin/main main`; `git checkout -b main` 创建一个名为 main 的新分支，并切换到这个分支;
 
