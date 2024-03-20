@@ -14,8 +14,9 @@
 
 git init
 # can't skip the following two steps, otherwise you can't create a local branch 
-git add <files_or_folders_with_changes>
-git commit -m "content of changing"
+git add <files_or_folders_with_changes> # git rm files to delete the files in the local repo, not only in the folder, use git ls-files to check
+git commit -m "content of changing" # neccessary to tell the remote repo. what we have done locally, so that github will change itself automatically
+
 # after commit, you are now in the local branch "master", git branch to ensure
 git branch -M main  # forcely rename the current branch "master" as "main"
 git remote add origin <GitHub_repo_SSH> # origin is the alias to the remote repo
